@@ -13,6 +13,7 @@
 		3C309DE31D1AAAA500676720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C309DE21D1AAAA500676720 /* Assets.xcassets */; };
 		3C309DE61D1AAAA500676720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C309DE41D1AAAA500676720 /* LaunchScreen.storyboard */; };
 		3C309DEF1D1AABD600676720 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C309DEE1D1AABD600676720 /* MainViewController.swift */; };
+		3C3BBD0E1D1C2F9D000687D7 /* wheel.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3C3BBD0D1D1C2F9D000687D7 /* wheel.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3C309DE51D1AAAA500676720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C309DE71D1AAAA500676720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C309DEE1D1AABD600676720 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3C3BBD0D1D1C2F9D000687D7 /* wheel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wheel.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		3C309DDA1D1AAAA500676720 /* ChatRoulette */ = {
 			isa = PBXGroup;
 			children = (
+				3C3BBD0D1D1C2F9D000687D7 /* wheel.wav */,
 				3C309DDB1D1AAAA500676720 /* AppDelegate.swift */,
 				3C309DDD1D1AAAA500676720 /* ViewController.swift */,
 				3C309DDF1D1AAAA500676720 /* Main.storyboard */,
@@ -135,6 +138,7 @@
 			files = (
 				3C309DE61D1AAAA500676720 /* LaunchScreen.storyboard in Resources */,
 				3C309DE31D1AAAA500676720 /* Assets.xcassets in Resources */,
+				3C3BBD0E1D1C2F9D000687D7 /* wheel.wav in Resources */,
 				3C309DE11D1AAAA500676720 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +266,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChatRoulette/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bouabane.ChatRoulette;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,6 +278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChatRoulette/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bouabane.ChatRoulette;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +304,7 @@
 				3C309DEC1D1AAAA500676720 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

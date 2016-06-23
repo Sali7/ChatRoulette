@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import SpriteKit
+import AVFoundation
 
 class MainViewController : UIViewController{
     
@@ -32,24 +34,38 @@ class MainViewController : UIViewController{
     }
     
     @IBAction func turnWheelAction(sender: AnyObject) {
-       timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(rotateWheel), userInfo: nil, repeats: true)
-
+       //timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(rotateWheel), userInfo: nil, repeats: true)
+       rotateWheel()
     }
     
     func rotateWheel() {
-        //set your angle here
-        //self.wheelImage.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / 90.0)
-        if(position){
-            UIView.animateWithDuration(2.0, animations: {
-                self.wheelImage.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / 180.0)
-            })
-            position = false
-        } else{
-            UIView.animateWithDuration(2.0, animations: {
-                self.wheelImage.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / 90.0)
-            })
-            position = true
+        var mySound: SystemSoundID = 0
+        if let soundURL = NSBundle.mainBundle().URLForResource("wheel", withExtension: "wav") {
+            AudioServicesCreateSystemSoundID(soundURL, &mySound)
+            // Play
+            AudioServicesPlaySystemSound(mySound)
         }
-      
+        
+        for _ in 1...10 {
+            if(position){
+                UIView.animateWithDuration(5.0, animations: {
+                    self.wheelImage.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / 180.0)
+                })
+                position = false
+            } else{
+                UIView.animateWithDuration(5.0, animations: {
+                    self.wheelImage.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / 90.0)
+                })
+                position = true
+            }
+            
+        }
+        
+        let randomTurn = arc4random_uniform(180) + 1
+        UIView.animateWithDuration(2.0, animations: {
+            self.wheelImage.transform = CGAffineTransformMakeRotation((180.0 * CGFloat(M_PI)) / CGFloat(randomTurn))
+        })
+        
+        
     }
 }
