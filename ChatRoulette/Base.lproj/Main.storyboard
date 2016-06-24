@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -17,23 +19,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ny-Jg-dYm">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ny-Jg-dYm">
                                 <rect key="frame" x="32" y="24" width="22" height="22"/>
                                 <connections>
                                     <action selector="turnWheelAction:" destination="BYZ-38-t0r" eventType="touchDown" id="4Qb-oJ-A9L"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDN-4Q-03U">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDN-4Q-03U">
                                 <rect key="frame" x="321" y="28" width="22" height="22"/>
                                 <connections>
                                     <action selector="stopWheelAction:" destination="BYZ-38-t0r" eventType="touchDown" id="HyB-LP-hZT"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wheel" translatesAutoresizingMaskIntoConstraints="NO" id="9bQ-IZ-ocd">
-                                <rect key="frame" x="26" y="172" width="323" height="333"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8dd-oW-FjZ">
+                                <rect key="frame" x="26" y="175" width="333" height="343"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wheel" translatesAutoresizingMaskIntoConstraints="NO" id="9bQ-IZ-ocd">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9bQ-IZ-ocd" secondAttribute="height" multiplier="323:333" id="U7N-GS-VrX"/>
+                                            <constraint firstAttribute="width" constant="333" id="Zzt-sx-r2g"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="qDN-4Q-03U" secondAttribute="trailing" constant="12" id="BK8-gL-Ups"/>
+                            <constraint firstItem="8dd-oW-FjZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HVm-Qv-YBS"/>
+                            <constraint firstItem="8dd-oW-FjZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MF4-x4-s89"/>
+                            <constraint firstItem="9Ny-Jg-dYm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="YUc-b8-3Kz"/>
+                            <constraint firstItem="9Ny-Jg-dYm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="fMA-nj-KZM"/>
+                            <constraint firstItem="qDN-4Q-03U" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="nBa-oB-ktm"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -42,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="564.5" y="427.5"/>
+            <point key="canvasLocation" x="353.5" y="394.5"/>
         </scene>
     </scenes>
     <resources>
