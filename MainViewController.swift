@@ -68,4 +68,14 @@ class MainViewController : UIViewController{
         
         
     }
+    
+    @IBAction func cardsAction(sender: AnyObject) {
+        let navController = AlwaysSwipeDemoViewController()
+        
+        // 2. Present the navigation controller
+        
+        self.presentViewController(navController, animated: true, completion: nil)
+
+    }
+    
 }

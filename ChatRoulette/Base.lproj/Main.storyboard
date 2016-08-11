@@ -28,7 +28,7 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDN-4Q-03U">
                                 <rect key="frame" x="321" y="28" width="22" height="22"/>
                                 <connections>
-                                    <action selector="stopWheelAction:" destination="BYZ-38-t0r" eventType="touchDown" id="HyB-LP-hZT"/>
+                                    <action selector="cardsAction:" destination="BYZ-38-t0r" eventType="touchDown" id="0vc-ZZ-FrG"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8dd-oW-FjZ">
